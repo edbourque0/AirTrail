@@ -10,5 +10,7 @@ export default {
     './node_modules/fumadocs-ui/dist/**/*.js',
     './node_modules/fumadocs-openapi/dist/**/*.js',
   ],
-  presets: [createPreset({ preset: 'dusk', addGlobalColors: true })],
+  presets: [
+    createPreset({ cssPrefix: '', preset: 'dusk', addGlobalColors: true }),
+  ],
 };
