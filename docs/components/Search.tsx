@@ -8,7 +8,8 @@ const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
 const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_API_KEY;
 const indexName = process.env.NEXT_PUBLIC_ALGOLIA_INDEX;
 
-if (!appId || !apiKey || !indexName) throw new Error('Algolia credentials');
+if (!appId || !apiKey || !indexName)
+  console.warn("Search won't work without Algolia credentials");
 
 const client = algo(appId, apiKey);
 
